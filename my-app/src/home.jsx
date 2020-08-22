@@ -15,9 +15,10 @@ import {
   Toolbar,
 } from "@material-ui/core";
 import About from "../src/About";
+import Contact from "../src/Contact";
 
 const ABOUT = "about";
-const RULES_PRIZES = "rulesAndPrizes";
+const CONTACT = "contact";
 const FAQ = "faq";
 const MENTORS = "mentors";
 
@@ -51,102 +52,6 @@ const RegisterButton = () => {
         Register
       </Button>
     </Box>
-  );
-};
-
-const RulesAndPrize = () => {
-  return (
-    <Grid container spacing={3}>
-      <Grid item xs={12} md={8}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Rules & Prizes
-        </Typography>
-        <Typography variant="body1" align="justify" gutterBottom>
-          We have a set of rules in place to make it a fair and respectful
-          competition.
-        </Typography>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Rulebook
-        </Typography>
-        <Typography variant="body1" align="justify" gutterBottom>
-          <ol>
-            <li>
-              All code developed during the Hackathon must be open source;
-            </li>
-            <li>Teams must from 3 to 5 people;</li>
-            <li>
-              The solution must be related to Social Distancing / COVID-19 /
-              Remote Work;
-            </li>
-            <li>
-              All documentation, code and other materials must be in English as
-              an official language;
-            </li>
-            <li>
-              Every participant, mentor and organization staff must follow the
-              Code of Conduct below;
-            </li>
-          </ol>
-        </Typography>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Code of Conduct
-        </Typography>
-        <Typography variant="body1" align="justify" gutterBottom>
-          By participating in the Hack From Home event, you agree to abide by
-          the following code of conduct.
-          <ol>
-            <li>
-              Please treat all other hackers with the utmost respect. We ask
-              that you act kindly, behave professionally, and do not insult or
-              put down other attendees. Remember that harassment and racist,
-              sexist, or exclusionary jokes are not appropriate for this event.
-              If at any point you see a fellow hacker being harassed, please
-              talk to any hackathon organizer using the Slack group (check the
-              [Staff] tag on Mentors page) or send an email to
-              contact@hackingfromhome.ca.
-            </li>
-            <li>
-              Please treat our sponsors, organizers, and judges with the utmost
-              respect. Without them, nothing would be possible. Consider taking
-              some time out of your work to go meet and speak with them. If they
-              come over to talk to you, we ask that you give them a bit of your
-              time. They're here for you! Show them you appreciate it.
-            </li>
-          </ol>
-          <strong>
-            Failure to comply with the above-stated Rules and Code of Conduct
-            may result in the offending team's disqualification, and mentor or
-            staff expulsion.
-          </strong>
-          <br />
-          <br />
-        </Typography>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Grading Criteria
-        </Typography>
-        At the end of the event, the mentors will use the following criteria to
-        grade the projects. Each item will receive a note from 0 to 10.
-        <br />
-        <ul>
-          <li>Compliance to the rules above</li>
-          <li>Completeness / Readiness</li>
-          <li>Applicability</li>
-          <li>User experience</li>
-          <li>Read-me (Github) / overall documentation</li>
-        </ul>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Prize
-        </Typography>
-        <Typography variant="body1" align="justify" gutterBottom>
-          In partnership with Coinsquare, we're awarding 1 (one) ETH crypto coin
-          to the winning team. The winning team's project will appear on all
-          Coinsquare’s Social Media channels.
-        </Typography>
-      </Grid>
-      <Grid item xs={12} md={4}>
-        <RegisterButton />
-      </Grid>
-    </Grid>
   );
 };
 
@@ -347,8 +252,8 @@ const Home = () => {
                 <HeaderItem title="About" actionFn={() => setDisplay(ABOUT)} />
                 <HeaderItem title="FAQ" actionFn={() => setDisplay(FAQ)} />
                 <HeaderItem
-                  title="Rules & Prizes"
-                  actionFn={() => setDisplay(RULES_PRIZES)}
+                  title="Contact"
+                  actionFn={() => setDisplay(CONTACT)}
                 />
                 <HeaderItem
                   title="Mentors"
@@ -363,8 +268,8 @@ const Home = () => {
         <Box display={display === ABOUT ? "block" : "none"}>
           <About />
         </Box>
-        <Box display={display === RULES_PRIZES ? "block" : "none"}>
-          <RulesAndPrize />
+        <Box display={display === CONTACT ? "block" : "none"}>
+          <Contact />
         </Box>
         <Box display={display === FAQ ? "block" : "none"}>
           <Faq />
