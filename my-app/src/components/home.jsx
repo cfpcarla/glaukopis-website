@@ -106,8 +106,9 @@ const homeStyles = makeStyles((theme) => ({
     marginTop: "2rem",
   },
   communityImg: {
+    width: '45vw',
     height: "60vh",
-    objectFit: "contain",
+    objectFit: "cover",
     marginTop: "2rem",
     [theme.breakpoints.down("sm")]: {
       width: "100vw",
