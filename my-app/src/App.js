@@ -15,12 +15,7 @@ import {
   SERVICE,
 } from "./controller/nav-controller";
 const useStyles = makeStyles((theme) => ({
-  root: {
-    paddingLeft: "5%",
-    paddingRight: "5%",
-    paddingBottom: theme.spacing(3),
-    paddingTop: theme.spacing(3),
-  },
+
 }));
 
 function App() {
@@ -29,7 +24,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Navigation setDisplay={setDisplay}></Navigation>
-      <div className={classes.root}>
+      <div >
         <Box display={display === HOME ? "block" : "none"}>
           <Home/>
         </Box>
