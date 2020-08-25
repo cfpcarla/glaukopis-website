@@ -66,7 +66,7 @@ const Navigation = (props) => {
       <div className={classes.root}>
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
-            <Grid container spacing={12} justify="space-between">
+            <Grid container justify="space-between">
               <Grid className={`${classes.logo} logo-container`} item xs={12} sm={12} md={3}>
                 <Owl className="logo" />
                 <Typography variant="h4" style={{ color: "black" }}>

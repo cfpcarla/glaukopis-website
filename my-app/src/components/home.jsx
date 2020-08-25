@@ -144,16 +144,16 @@ const homeStyles = makeStyles((theme) => ({
   footer: {
     height: '50vh',
     display: 'flex',
-    flexWrap:'wrap',
+    flexWrap: 'wrap',
     justifyContent: 'space-around',
     marginTop: '5rem'
   },
   logo: {
-    display:'flex',
-    flexDirection:'column',
-    justifyContent:'center',
-    alignItems:'center',
-    margin:'auto'
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 'auto'
   },
 }));
 const Home = () => {
@@ -163,8 +163,9 @@ const Home = () => {
     <>
       <div>
         {/* VALUE PROPOSITION */}
-        <Grid xs={12} className={classes.proposition}>
+        <Grid item xs={12} className={classes.proposition}>
           <Grid
+            item
             xs={12}
             sm={12}
             md={6}
@@ -196,11 +197,11 @@ const Home = () => {
         </Grid>
 
         {/* LIST FEATURE PROVIDED */}
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <Typography variant="h4" align="center" style={{ marginTop: "2rem" }}>
             Provided Features
           </Typography>
-          <Grid xs={12} className={classes.featureList}>
+          <Grid item xs={12} className={classes.featureList}>
             <CardFeature
               title="Education Search Engingee"
               desc="Reduce your time spend search for resources and comparing them, let us handle that"
@@ -225,7 +226,7 @@ const Home = () => {
         </Grid>
 
         {/* FLEX ON THE SEARCH ENGINEE */}
-        <Grid xs={12} md={12} className={classes.resourcesListContainer}>
+        <Grid item xs={12} md={12} className={classes.resourcesListContainer}>
           <Paper className={classes.resourcesPaper}>
             <Typography variant="h3" align="center">
               We crawl through the internet to find resources from
@@ -292,6 +293,7 @@ const Home = () => {
         {/* Community Hub explain */}
         <Box xs={12} display="flex" flexWrap="wrap">
           <Grid
+            item
             xs={12}
             lg={6}
             md={6}
@@ -315,7 +317,7 @@ const Home = () => {
               Explore now
             </Button>
           </Grid>
-          <Grid xs={12} lg={5} md={5}>
+          <Grid item xs={12} lg={5} md={5}>
             <img
               className={classes.communityImg}
               src={CommunityHub}
@@ -326,7 +328,7 @@ const Home = () => {
 
 
         <Box xs={12} className={classes.nextStep}>
-          <Grid xs={9} className={classes.nexStepContent}>
+          <Grid item xs={9} className={classes.nexStepContent}>
             <Typography variant="h3"> Ready to get started ?</Typography>
             <Typography variant="h4" style={{ marginTop: "2rem" }}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -334,7 +336,7 @@ const Home = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it
             </Typography>
-            <Grid xs={12} className={classes.buttonContainer}>
+            <Grid item xs={12} className={classes.buttonContainer}>
               <Button style={{ width: '8rem', height: '4rem', marginRight: '3vw' }} variant="contained" color="secondary">
                 Start now
             </Button>
@@ -345,8 +347,8 @@ const Home = () => {
           </Grid>
         </Box>
 
-            <Footer/>
-       
+        <Footer />
+
       </div>
     </>
   );

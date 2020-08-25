@@ -53,7 +53,7 @@ const Footer = () => {
   return (
     <>
       <Box className={classes.footer}>
-        <Grid xs={12} className={classes.footerHeader}>
+        <Grid item xs={12} className={classes.footerHeader}>
           <Grid className={classes.logo} item xs={12} sm={12} md={3}>
             <Owl className="logo" />
           </Grid>
@@ -88,7 +88,7 @@ const Footer = () => {
               {" "}
               Email
             </Typography>
-            <Typography variant="h5" Wrap>
+            <Typography variant="h5" >
               {" "}
               quantrithanh1999@gmail.com
             </Typography>

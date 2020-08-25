@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-  const [display, setDisplay] = useState(HOME);
+  //SET WHICH TAB YOU WANT TO WORK IN
+  const [display, setDisplay] = useState(CONTACT);
   return (
     <ThemeProvider theme={theme}>
       <Navigation setDisplay={setDisplay}></Navigation>
