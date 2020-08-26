@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
 import { theme } from "./styles/theme";
-import { Box, makeStyles, ThemeProvider } from "@material-ui/core";
+import { Box, ThemeProvider } from "@material-ui/core";
 import Navigation from "./components/Navigation";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./components/home";
+import Service from "./components/Service";
 
 import {
   HOME,
@@ -14,14 +15,12 @@ import {
   PERSONA,
   SERVICE,
 } from "./controller/nav-controller";
-const useStyles = makeStyles((theme) => ({
+import Footer from "./components/footer";
 
-}));
 
 function App() {
-  const classes = useStyles();
   //SET WHICH TAB YOU WANT TO WORK IN
-  const [display, setDisplay] = useState(CONTACT);
+  const [display, setDisplay] = useState(SERVICE);
   return (
     <ThemeProvider theme={theme}>
       <Navigation setDisplay={setDisplay}></Navigation>
@@ -35,9 +34,12 @@ function App() {
         <Box display={display === CONTACT ? "block" : "none"}>
           <Contact />
         </Box>
-        <Box display={display === SERVICE ? "block" : "none"}></Box>
+        <Box display={display === SERVICE ? "block" : "none"}>
+          <Service/>
+        </Box>
         <Box display={display === PERSONA ? "block" : "none"}></Box>
       </div>
+      <Footer/>
     </ThemeProvider>
   );
 }

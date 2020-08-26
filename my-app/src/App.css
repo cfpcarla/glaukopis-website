@@ -1,5 +1,4 @@
-@import './styles/nav.css';
-@import './styles/home.css';
+
 
 .App {
   text-align: center;
@@ -31,6 +30,21 @@
   color: #61dafb;
 }
 
+.logo{
+  width : 7vw;
+  height:  6vh;
+}
+.img{
+  width : 30vw;
+  height : 50vh;
+}
+@media only screen and (max-width: 960px) {
+  .img{
+    margin: auto;
+    width: 95vw;
+    height: 40vh;
+  }
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

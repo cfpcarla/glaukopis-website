@@ -9,13 +9,27 @@ export const theme = createMuiTheme({
   shape: {
     borderRadius: 5,
   },
-  overrides: {
-    //override some of the classes material ui provide
+  palette: {
+    primary: {
+      main: "#455954",
+      light: "#e2e0d4 ",
+      dark: "#070502 ",
+      contrastText: "#ffffff",
+    },
+    secondary: {
+      main: "#222c3c",
+      light: "#e2e0d4 ",
+      dark: "#070502 ",
+      contrastText: "#ffffff",
+    },
+    error: {
+      main: "#A21C2B",
+    },
   },
-  props: {
-    //change the propoty of the classes.
-  },
+  spacing: 5,
+  
 });
+
 theme.typography.h1 = {
   fontSize: "2rem",
   fontFamily: "Playfair Display",
@@ -25,6 +39,17 @@ theme.typography.h1 = {
   },
   [theme.breakpoints.up("md")]: {
     fontSize: "4rem",
+  },
+};
+theme.typography.h2 = {
+  fontSize: "1.75rem",
+  fontFamily: "Playfair Display",
+
+  "@media (min-width:600px)": {
+    fontSize: "2.5rem",
+  },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "3.5rem",
   },
 };
 
@@ -43,7 +68,7 @@ theme.typography.h3 = {
 theme.typography.h4 = {
   fontSize: "1rem",
   fontFamily: "Playfair Display",
-  fontWeight : 'normal',
+  fontWeight: "normal",
   "@media (min-width:600px)": {
     fontSize: "1.2rem",
   },
@@ -55,7 +80,7 @@ theme.typography.h4 = {
 theme.typography.h5 = {
   fontSize: "0.8rem",
   fontFamily: "Playfair Display",
-  fontWeight : 'normal',
+  fontWeight: "normal",
   "@media (min-width:600px)": {
     fontSize: "1rem",
   },

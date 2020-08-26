@@ -1,11 +1,9 @@
 import React from "react";
 import {
   makeStyles,
-  Button,
   Grid,
   Typography,
   Box,
-  Paper,
   Link,
 } from "@material-ui/core";
 
@@ -16,9 +14,11 @@ const footerStyle = makeStyles((theme) => ({
   root: {},
 
   footer: {
+
+    paddingTop:'1rem',
     display: "flex",
     flexWrap: "wrap",
-    marginTop: "5vh",
+    marginTop: "2vh",
     marginLeft: "0",
     color:'white'
   },

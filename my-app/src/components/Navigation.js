@@ -24,9 +24,6 @@ const HeaderItem = ({ title, actionFn }) => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
   return (
     <Button aria-controls="simple-menu" aria-haspopup="true" onClick={actionFn}>
       <Typography variant="h6">{title}</Typography>

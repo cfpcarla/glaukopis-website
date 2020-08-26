@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Online_Learning from "../assets/photo/online-learning.jpg";
-import CardFeature from "./side-components/home-card-feature";
+import CardFeature from "./side-components/card-features";
 import {
   makeStyles,
   Button,
@@ -13,10 +13,10 @@ import {
 
 import OnlineLearningIllustration from "../assets/photo/online-learning-illustration.png";
 import SubwayLine from "../assets/photo/subway-lines.png";
+import Chalkboard from "../assets/photo/chalkboard.jpg";
 
 import CommunityHub from "../assets/photo/united-nations-covid-19-response.jpg";
 import Forum from "../assets/photo/forum.png";
-import RetroFurnish from "../assets/photo/retro-furnish.png";
 
 import Workshop from "../assets/photo/workshop.png";
 import JobSearch from "../assets/photo/job-opportunities.png";
@@ -28,7 +28,6 @@ import Coursera from "../assets/photo/coursera-logo-black-transparent.png";
 import Indeed from "../assets/photo/indeed-logo.png";
 import Glassdoor from "../assets/photo/glassdoor-logo.png";
 import LinkedIn from "../assets/photo/linkedin.png";
-import Footer from "./footer";
 
 const homeStyles = makeStyles((theme) => ({
   root: {},
@@ -121,7 +120,7 @@ const homeStyles = makeStyles((theme) => ({
     // retro-furnish.png
     background:
       "linear-gradient(248.24deg, rgba(0, 0, 0, 0.473434) 0.31%, rgba(0, 0, 0, 0.441699) 20.56%, rgba(0, 0, 0, 0.437494) 77.15%, rgba(0, 0, 0, 0.447353) 99.8%, rgba(10, 10, 10, 0) 99.96%, rgba(126, 126, 126, 0) 99.97%, rgba(0, 0, 0, 0.5) 99.98%), url(" +
-      RetroFurnish +
+      Chalkboard +
       ")",
 
     backgroundRepeat: "repeat",
@@ -206,21 +205,33 @@ const Home = () => {
               title="Education Search Engingee"
               desc="Reduce your time spend search for resources and comparing them, let us handle that"
               img={OnlineLearningIllustration}
+              btn={true}
+              maxWidth={300}
+              margin="0 auto 0 auto"
             />
             <CardFeature
               title="Job Search Enginee"
               desc="Reduce your time spend search for resources and comparing them, let us handle that"
               img={Forum}
+              btn={true}
+              maxWidth={300}
+              margin="0 auto 0 auto"
             />
             <CardFeature
               title="Community Hub"
               desc="Reduce your time spend search for resources and comparing them, let us handle that"
               img={Workshop}
+              btn={true}
+              maxWidth={300}
+              margin="0 auto 0 auto"
             />
             <CardFeature
               title="Professional Workshop"
               desc="Reduce your time spend search for resources and comparing them, let us handle that"
               img={JobSearch}
+              btn={true}
+              maxWidth={300}
+              margin="0 auto 0 auto"
             />
           </Grid>
         </Grid>
@@ -347,7 +358,6 @@ const Home = () => {
           </Grid>
         </Box>
 
-        <Footer />
 
       </div>
     </>
