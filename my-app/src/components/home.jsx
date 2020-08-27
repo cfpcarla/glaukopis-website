@@ -1,6 +1,7 @@
 import React from "react";
 import Online_Learning from "../assets/photo/online-learning.jpg";
 import CardFeature from "./side-components/card-features";
+
 import {
   makeStyles,
   Button,
@@ -105,7 +106,7 @@ const homeStyles = makeStyles((theme) => ({
     marginTop: "2rem",
   },
   communityImg: {
-    width: '45vw',
+    width: "45vw",
     height: "60vh",
     objectFit: "cover",
     marginTop: "2rem",
@@ -113,7 +114,6 @@ const homeStyles = makeStyles((theme) => ({
       width: "100vw",
       height: "20vh",
       objectFit: "cover",
-
     },
   },
   nextStep: {
@@ -129,30 +129,30 @@ const homeStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     color: "white",
-    padding: '3rem'
+    padding: "3rem",
   },
   nexStepContent: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
   },
   buttonContainer: {
-    marginTop: '5vh',
-    display: 'flex',
+    marginTop: "5vh",
+    display: "flex",
   },
   footer: {
-    height: '50vh',
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    marginTop: '5rem'
+    height: "50vh",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    marginTop: "5rem",
   },
   logo: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: 'auto'
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "auto",
   },
 }));
 const Home = () => {
@@ -284,9 +284,7 @@ const Home = () => {
                 src={LinkedIn}
               />
             </Box>
-            <Typography variant="h6">
-              + dozen more resources to come
-            </Typography>
+            <Typography variant="h6">+ dozen more resources to come</Typography>
             <Typography
               align="center"
               variant="h4"
@@ -317,8 +315,8 @@ const Home = () => {
             <Typography variant="h4" style={{ marginTop: "2rem" }}>
               We bring together everything that’s require to land your next
               jobs. From edcational resources to improve your skills, to job
-              search enginee, or a professional workshop where you can
-              improve upon your interview and resume skill.
+              search enginee, or a professional workshop where you can improve
+              upon your interview and resume skill.
             </Typography>
             <Typography variant="h4" style={{ margin: "2rem 0 2rem 0" }}>
               We also provide a <Link>community hub</Link> for users to join and
@@ -337,7 +335,6 @@ const Home = () => {
           </Grid>
         </Box>
 
-
         <Box xs={12} className={classes.nextStep}>
           <Grid item xs={9} className={classes.nexStepContent}>
             <Typography variant="h3"> Ready to get started ?</Typography>
@@ -348,17 +345,23 @@ const Home = () => {
               type and scrambled it
             </Typography>
             <Grid item xs={12} className={classes.buttonContainer}>
-              <Button style={{ width: '8rem', height: '4rem', marginRight: '3vw' }} variant="contained" color="secondary">
+              <Button
+                style={{ width: "8rem", height: "4rem", marginRight: "3vw" }}
+                variant="contained"
+                color="secondary"
+              >
                 Start now
-            </Button>
-              <Button style={{ width: '8rem', height: '4rem' }} variant="contained" color="primary">
+              </Button>
+              <Button
+                style={{ width: "8rem", height: "4rem" }}
+                variant="contained"
+                color="primary"
+              >
                 Explore services
-            </Button>
+              </Button>
             </Grid>
           </Grid>
         </Box>
-
-
       </div>
     </>
   );
