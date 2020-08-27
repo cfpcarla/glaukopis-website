@@ -66,7 +66,7 @@ const CardFeature = (props) => {
           <Button
             className={classes.btnSecondary}
             variant="contained"
-            color="primary"
+            color="secondary"
             size="medium"
           >
             Learn More

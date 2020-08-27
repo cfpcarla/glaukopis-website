@@ -149,16 +149,16 @@ const Service = () => {
           </Typography>
           <Grid item xs={12} className={classes.generalFeatureList}>
             <CardFeature
-              title="Education Search "
-              desc="Reduce your time spend search for resources and comparing them, let us handle that"
+              title="Educational Programs"
+              desc="Our online course selection has been vetted and verified to provide you with the industry’s most renowned learning materials. Our up to date programs are actively implemented and will help to give you a leading edge in your field of interest."
               img={OnlineLearningIllustration}
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
             />
             <CardFeature
-              title="Job Search "
-              desc="Reduce your time spend search for resources and comparing them, let us handle that"
+              title="Job Opportunities"
+              desc="Our in house bulletin boards are made to be the first stop on your employment pursuits. We offer links to job search engines, companies hiring around you, and business postings for both contract and internship availabilities."
               img={Forum}
               btn={true}
               maxWidth={300}
@@ -166,15 +166,15 @@ const Service = () => {
             />
             <CardFeature
               title="Community Hub"
-              desc="Reduce your time spend search for resources and comparing them, let us handle that"
+              desc="Our community hub is a gateway for teachers, students, businesses, and individuals - All working, learning, and improving as one."
               img={Workshop}
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
             />
             <CardFeature
-              title="Professional Workshop"
-              desc="Reduce your time spend search for resources and comparing them, let us handle that"
+              title="Hiring Workshop"
+              desc="Job in mind? Strengthen your skills and ace your next job interview with ease!"
               img={JobSearch}
               btn={true}
               maxWidth={300}
@@ -198,36 +198,24 @@ const Service = () => {
           />
           <Grid item xs={10} md={4} lg={4} className={classes.Content}>
             <Typography style={{ marginBottom: "0.5rem" }} variant="h2">
-              Education Search Enginee
+              Education Search Engine
             </Typography>
 
             <Typography variant="h4">
-              Use our search enginee Glaukopis to search for your perfect
-              resources - from any education platform or any format, - so you
-              can study and upskill for your next career or promotion.
+              Utilize our Glaukopis Wisdom archive to find tailored resources to
+              fit your personal needs – Whether it’s a new degree, a new
+              profession, or a new mentor, our courses and upskilling selections
+              are here for you.
             </Typography>
             <Grid item xs={12}>
               <Typography variant="h4" style={{ marginTop: "2rem" }}>
-                Search Enginee Features
+                Search Engine Features
               </Typography>
               <Grid container className={classes.contentFeatureList}>
                 <Carousel autoPlay={false}>
                   <CardFeature
-                    title="Multi sources "
-                    desc="Our library collect
-                    information related to educational courses
-                    or program from around the internet, 
-                    and slot them here for you to view. Either that is from Youtube
-                    University program, Online courses, or online bootcamp - here 
-                    you can find all of them customize for your preference. "
-                    img={Collecting}
-                    btn={false}
-                    maxWidth={500}
-                    margin="0 2vw 0 0"
-                  />
-                  <CardFeature
-                    title="Filter to your taste "
-                    desc="Change what platform you want us to search in - either it's Online courses, University lecture, or Youtube videos "
+                    title="Filter your category "
+                    desc="Compare course options and filter through, duration of course, price of course, program certifications, and degree upon completion."
                     img={Filter}
                     btn={false}
                     maxWidth={500}
@@ -235,7 +223,7 @@ const Service = () => {
                   />
                   <CardFeature
                     title="Save and Compare"
-                    desc="Still don't know which one to choose - save and compare theme both side by side "
+                    desc="Compare course options and filter through, duration of course, price of course, program certifications, and degree upon completion. "
                     img={Compare}
                     btn={false}
                     maxWidth={500}
@@ -243,7 +231,7 @@ const Service = () => {
                   />
                   <CardFeature
                     title="General Review"
-                    desc="We gather review from the resources website so you can validate it base on how satisfy everyone was when learning"
+                    desc="Our users and Gloaukopis Wisdom analysts give you real time feedback and expert opinions on their own experiences and what they have learned."
                     img={Review}
                     btn={false}
                     maxWidth={500}
@@ -257,7 +245,7 @@ const Service = () => {
               color="primary"
               variant="contained"
             >
-              Start your education search now
+              Search our program now
             </Button>
           </Grid>
         </Grid>
@@ -266,39 +254,22 @@ const Service = () => {
         <Grid container className={classes.Container}>
           <Grid item xs={10} md={4} lg={4} className={classes.Content}>
             <Typography style={{ marginBottom: "0.5rem" }} variant="h2">
-              Job Search Enginee
+              Job Search Engine
             </Typography>
 
             <Typography variant="h4">
-              Similar to how to can search for education resources - you can too
-              search for your next jobs -{" "}
-              <b>but boarder, wider, and more result</b>.
+              Similar to traditional job searches, we offer a precise range of
+              options - more carefully related to your field.
             </Typography>
             <Grid item xs={12}>
               <Typography variant="h4" style={{ marginTop: "2rem" }}>
-                Search Enginee Features
+                Search Engine Features
               </Typography>
               <Grid container className={classes.contentFeatureList}>
                 <Carousel autoPlay={false}>
                   <CardFeature
-                    title="Multi job board "
-                    desc="Our job library contain one of the most well sorted and collected job post resources around the internet - From Indeed to Company website job post, we got them all"
-                    img={Collecting}
-                    btn={false}
-                    maxWidth={500}
-                    margin="0 2vw 0 0"
-                  />
-                  <CardFeature
-                    title="Save and Compare"
-                    desc="Still don't know which one to choose - save and compare theme side by side "
-                    img={Compare}
-                    btn={false}
-                    maxWidth={500}
-                    margin="0 2vw 0 0"
-                  />
-                  <CardFeature
                     title="Highlighted section"
-                    desc="We automaticlly went through the job post - scan for important details and highlight them in seperate section for you to get a summary out of what the recruiter want from an ideal candidate"
+                    desc="We automaticlly went through the job post - scan for important details and highlight them in each section for you to get a scope at what the recruiter want from an ideal candidate"
                     img={Lightbuld}
                     btn={false}
                     maxWidth={500}
@@ -306,7 +277,7 @@ const Service = () => {
                   />
                   <CardFeature
                     title="Customize notification"
-                    desc="We provide notification about new job post base on your job search selected and allow you to what time you want us to notify you"
+                    desc="We provide notification about new job posts based on your own customization"
                     img={Bell}
                     btn={false}
                     maxWidth={500}
@@ -314,7 +285,8 @@ const Service = () => {
                   />
                   <CardFeature
                     title="Customizable file upload"
-                    desc="Instead of writing and customize your resume, cover letter, and possible answer - We offer users who are sign in to have a folder storing multiple resume and cover letter along with predefined answer to reuse"
+                    desc="Instead of writing and customizing your resume, cover letter, and answer -
+                     We offer users who are sign in to have a folder to store multiple resume and cover letter along with predefined answer for reusable purpose"
                     img={Folders}
                     btn={false}
                     maxWidth={500}
@@ -378,7 +350,7 @@ const Service = () => {
                   />
                   <CardFeature
                     title="Customize your interest"
-                    desc="Select from a wide range of tags and category which interest you, and we will customize your community tab with what you want to see. "
+                    desc="Select from a category of interested, so we can match you with groups or peoples that have the same. "
                     img={Filter}
                     btn={false}
                     maxWidth={500}
@@ -415,9 +387,8 @@ const Service = () => {
             </Typography>
 
             <Typography variant="h4">
-              Similar to how to can search for education resources - you can too
-              search for your next jobs -{" "}
-              <b>but boarder, wider, and more result</b>.
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
             </Typography>
             <Grid item xs={12}>
               <Typography variant="h4" style={{ marginTop: "2rem" }}>

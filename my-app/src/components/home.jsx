@@ -7,9 +7,9 @@ import {
   Grid,
   Typography,
   Box,
-  Paper,
   Link,
 } from "@material-ui/core";
+import { ABOUT, SERVICE } from "../controller/nav-controller";
 
 import OnlineLearningIllustration from "../assets/photo/online-learning-illustration.png";
 import SubwayLine from "../assets/photo/subway-lines.png";
@@ -30,7 +30,7 @@ import Glassdoor from "../assets/photo/glassdoor-logo.png";
 import LinkedIn from "../assets/photo/linkedin.png";
 
 const homeStyles = makeStyles((theme) => ({
-  root: {},
+  root: { flexGrow: 1 },
   proposition: {
     height: "70vh",
     background:
@@ -55,13 +55,15 @@ const homeStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
   },
   imgBrand: {
+
     width: "3.5rem",
     height: "3.5rem",
-    objectFit: "contain",
+    objectFit: 'contain',
     margin: "auto",
     [theme.breakpoints.down("sm")]: {
-      width: "1.5rem",
-      height: "1.5rem",
+      width: "2.5rem",
+      height: "2.5rem",
+      margin: '0 2vw 0 2vw'
     },
   },
   resourcesListContainer: {
@@ -85,18 +87,20 @@ const homeStyles = makeStyles((theme) => ({
     margin: "2rem auto 0 auto",
     width: "60vw",
     [theme.breakpoints.down("sm")]: {
-      width: "100vw",
+      width: "80vw",
     },
   },
   resourcesPaper: {
-    width: "70vw",
+
+    borderRadius: '5px',
     backgroundColor: "#ffffffc4",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "space-around",
     alignItems: "center",
     [theme.breakpoints.down("md")]: {
       width: "100vw",
+      height:'auto'
     },
   },
   CommunityHub: {
@@ -105,7 +109,7 @@ const homeStyles = makeStyles((theme) => ({
     marginTop: "2rem",
   },
   communityImg: {
-    width: '45vw',
+    width: '40vw',
     height: "60vh",
     objectFit: "cover",
     marginTop: "2rem",
@@ -135,10 +139,25 @@ const homeStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    width: "40vw",
+    [theme.breakpoints.down("sm")]: {
+      width: "90vw",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "100vw",
+    },
   },
   buttonContainer: {
     marginTop: '5vh',
     display: 'flex',
+    flexWrap: 'wrap',
+
+  },
+  btnCont: {
+    width: '8rem', height: '4rem', marginRight: '3vw',
+    [theme.breakpoints.down("sm")]: {
+      width: "100vw",
+    },
   },
   footer: {
     height: '50vh',
@@ -155,9 +174,11 @@ const homeStyles = makeStyles((theme) => ({
     margin: 'auto'
   },
 }));
-const Home = () => {
+const Home = (props) => {
   const classes = homeStyles();
-
+  const setParentDisplay = (value) => {
+    props.setDisplay(value);
+  };
   return (
     <>
       <div>
@@ -175,16 +196,16 @@ const Home = () => {
             }}
           >
             <Typography variant="h1" align="center">
-              Prepare for your next job faster and smarter
-            </Typography>
+              Perfect your professional portfolio
+              </Typography>
             <Typography
               variant="h4"
               align="center"
-              style={{ marginTop: "2rem", color: "#d4d4d4" }}
+
+              style={{ marginTop: "1rem", color: "#d4d4d4" }}
             >
-              A search platform with a dedicated community hub for you to search
-              all the learning materials, job posts and tips around the
-              internet.
+              Your curated library of learning materials, job postings, and dedicated networking communities - All within a single sources!
+
             </Typography>
             <Button
               style={{ marginTop: "2rem", fontSize: "1.5rem" }}
@@ -202,16 +223,16 @@ const Home = () => {
           </Typography>
           <Grid item xs={12} className={classes.featureList}>
             <CardFeature
-              title="Education Search Engingee"
-              desc="Reduce your time spend search for resources and comparing them, let us handle that"
+              title="Educational Programs"
+              desc="Our online course selection has been vetted and verified to provide you with the industry’s most renowned learning materials. Our up to date programs are actively implemented and will help to give you a leading edge in your field of interest."
               img={OnlineLearningIllustration}
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
             />
             <CardFeature
-              title="Job Search Enginee"
-              desc="Reduce your time spend search for resources and comparing them, let us handle that"
+              title="Job Opportunities"
+              desc="Our in house bulletin boards are made to be the first stop on your employment pursuits. We offer links to job search engines, companies hiring around you, and business postings for both contract and internship availabilities."
               img={Forum}
               btn={true}
               maxWidth={300}
@@ -219,15 +240,15 @@ const Home = () => {
             />
             <CardFeature
               title="Community Hub"
-              desc="Reduce your time spend search for resources and comparing them, let us handle that"
+              desc="Our community hub is a gateway for teachers, students, businesses, and individuals - All working, learning, and improving as one."
               img={Workshop}
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
             />
             <CardFeature
-              title="Professional Workshop"
-              desc="Reduce your time spend search for resources and comparing them, let us handle that"
+              title="Hiring Workshop"
+              desc="Job in mind? Strengthen your skills and ace your next job interview with ease!"
               img={JobSearch}
               btn={true}
               maxWidth={300}
@@ -238,11 +259,11 @@ const Home = () => {
 
         {/* FLEX ON THE SEARCH ENGINEE */}
         <Grid item xs={12} md={12} className={classes.resourcesListContainer}>
-          <Paper className={classes.resourcesPaper}>
-            <Typography variant="h3" align="center">
-              We crawl through the internet to find resources from
+          <Box height='80%' className={classes.resourcesPaper}>
+            <Typography gutterBottom variant="h3" align="center">
+              We search around the internet to find the best resources for you to improve upon your next career path.
             </Typography>
-            <Box xs={12} className={classes.resourcesList}>
+            <Box className={classes.resourcesList}>
               <img
                 className={classes.imgBrand}
                 alt="education source"
@@ -284,21 +305,25 @@ const Home = () => {
                 src={LinkedIn}
               />
             </Box>
-            <Typography variant="h6">
+            <Typography variant="h4">
               + dozen more resources to come
             </Typography>
             <Typography
               align="center"
-              variant="h4"
+              variant="h3"
               style={{ fontWeight: "bold" }}
             >
               so that you don't
             </Typography>
 
-            <Typography style={{ textAlign: "center", fontSize: 24 }}>
-              <Link href="#">Search now</Link>
-            </Typography>
-          </Paper>
+            <Button
+              style={{ marginTop: "2rem", fontSize: "1.5rem" }}
+              variant="contained"
+              color='primary'
+            >
+              Start now
+            </Button>
+          </Box>
         </Grid>
 
         {/* Community Hub explain */}
@@ -311,18 +336,18 @@ const Home = () => {
             style={{ margin: "2rem auto 2rem auto", paddingLeft: "1rem" }}
           >
             <Typography variant="h3">
-              A fully integrated suite of learning material and job resources
-              from multiple platform combind
+              A fully integrated suite of learning materials and job resources
+              from multiple platforms combind
             </Typography>
             <Typography variant="h4" style={{ marginTop: "2rem" }}>
               We bring together everything that’s require to land your next
-              jobs. From edcational resources to improve your skills, to job
-              search enginee, or a professional workshop where you can
-              improve upon your interview and resume skill.
+              job. From edcational resources to improve your skills, to job
+              search engine, or a professional workshop where you can
+              improve upon your interview and resume skills.
             </Typography>
             <Typography variant="h4" style={{ margin: "2rem 0 2rem 0" }}>
-              We also provide a <Link>community hub</Link> for users to join and
-              share their ideals, struggle, and suggestion to one of another.{" "}
+              We also provide a <Link color='secondary'>community hub</Link> for users to join and
+              share their thought to one of another.
             </Typography>
             <Button variant="contained" color="primary">
               Explore now
@@ -342,18 +367,18 @@ const Home = () => {
           <Grid item xs={9} className={classes.nexStepContent}>
             <Typography variant="h3"> Ready to get started ?</Typography>
             <Typography variant="h4" style={{ marginTop: "2rem" }}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it
+              Still having trouble understanding our mission or services - Learn more about our services and about us bellow
             </Typography>
             <Grid item xs={12} className={classes.buttonContainer}>
-              <Button style={{ width: '8rem', height: '4rem', marginRight: '3vw' }} variant="contained" color="secondary">
+              <Button className={classes.btnCont} variant="contained" color="secondary">
                 Start now
-            </Button>
-              <Button style={{ width: '8rem', height: '4rem' }} variant="contained" color="primary">
+              </Button>
+              <Button className={classes.btnCont} onClick={() => setParentDisplay(SERVICE)} variant="contained" color="primary" >
                 Explore services
-            </Button>
+              </Button>
+              <Button className={classes.btnCont} onClick={() => { setParentDisplay(ABOUT) }} variant="contained" color="default" >
+                Learn about us
+              </Button>
             </Grid>
           </Grid>
         </Box>

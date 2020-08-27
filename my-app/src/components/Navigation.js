@@ -19,7 +19,6 @@ import {
   Hidden,
   List,
   ListItem,
-  ListItemText,
   ListItemIcon,
 } from "@material-ui/core";
 
@@ -33,10 +32,7 @@ import {
 
 //navigation button
 const HeaderItem = ({ title, actionFn }) => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+
   return (
     <Button aria-controls="simple-menu" aria-haspopup="true" onClick={actionFn}>
       <Typography variant="h5">{title}</Typography>
@@ -111,7 +107,10 @@ const Navigation = (props) => {
             <GradeIcon />
           </ListItemIcon>
 
-          <HeaderItem title="Service" actionFn={() => setParentDisplay(SERVICE)} />
+          <HeaderItem
+            title="Service"
+            actionFn={() => setParentDisplay(SERVICE)}
+          />
         </ListItem>
         <ListItem button>
           <ListItemIcon>
@@ -127,7 +126,10 @@ const Navigation = (props) => {
           <ListItemIcon>
             <PeopleAltIcon />
           </ListItemIcon>
-          <HeaderItem title="Persona" actionFn={() => setParentDisplay(PERSONA)} />
+          <HeaderItem
+            title="Persona"
+            actionFn={() => setParentDisplay(PERSONA)}
+          />
         </ListItem>
       </List>
     </div>
@@ -144,7 +146,6 @@ const Navigation = (props) => {
         <AppBar position="static" className={classes.appBar}>
           <Toolbar>
             <IconButton
-              color="black"
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
@@ -175,7 +176,7 @@ const Navigation = (props) => {
                     actionFn={() => setParentDisplay(HOME)}
                   />
                   <HeaderItem
-                    title="About"
+                    title="About Us"
                     actionFn={() => setParentDisplay(ABOUT)}
                   />
                   <HeaderItem
@@ -183,7 +184,7 @@ const Navigation = (props) => {
                     actionFn={() => setParentDisplay(SERVICE)}
                   />
                   <HeaderItem
-                    title="Contact"
+                    title="Contact Us"
                     actionFn={() => setParentDisplay(CONTACT)}
                   />
                   <HeaderItem

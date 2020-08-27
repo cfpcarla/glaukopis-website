@@ -1,32 +1,26 @@
 import React from "react";
-import {
-  makeStyles,
-  Grid,
-  Typography,
-  Box,
-  Link,
-} from "@material-ui/core";
+import { makeStyles, Grid, Typography, Box, Link } from "@material-ui/core";
 
 import { ReactComponent as Owl } from "../assets/svg/owl.svg";
 import Chalkboard from "../assets/photo/chalkboard.jpg";
-
+import { CONTACT } from "../controller/nav-controller";
 const footerStyle = makeStyles((theme) => ({
   root: {},
 
   footer: {
-
-    paddingTop:'1rem',
+    paddingTop: "1rem",
     display: "flex",
     flexWrap: "wrap",
     marginTop: "2vh",
     marginLeft: "0",
-    color:'white'
+    color: "white",
   },
   footerHeader: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    color: 'black'
+    marginBottom: "2vh",
+    borderRight: "solid white 2px",
   },
   footerContentContainer: {
     background:
@@ -36,84 +30,83 @@ const footerStyle = makeStyles((theme) => ({
 
     backgroundRepeat: "repeat",
     display: "flex",
+    height: "auto",
     width: "100vw",
-    height: "30vh",
+    flexWrap: "wrap",
     justifyContent: "space-around",
     marginTop: "2vh",
     paddingTop: "2vh",
+    paddingBottom: "4vh",
   },
   footerContent: {
-    width: "25vw",
-    height: "20vh",
+    width: "70vw",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    [theme.breakpoints.down("sm")]: {
+      width: "95vw",
+    },
   },
 }));
-const Footer = () => {
+const Footer = (props) => {
   const classes = footerStyle();
-
+  const setParentDisplay = (value) => {
+    props.setDisplay(value);
+  };
   return (
     <>
       <Box className={classes.footer}>
-        <Grid item xs={12} className={classes.footerHeader}>
-          <Grid className={classes.logo} item xs={12} sm={12} md={3}>
-            <Owl className="logo" />
-          </Grid>
-          <Typography variant="h4"> Glaukopis Wisdom</Typography>
-          <Typography variant="h5"> value proposition insert here</Typography>
-        </Grid>
         <Box xs={12} className={classes.footerContentContainer}>
-          <Grid className={classes.footerContent}>
-            <Typography variant="h4" style={{ fontWeight: "bold" }}>
-              {" "}
-              Explore
-            </Typography>
-            <Typography variant="h5"> Home</Typography>
-            <Typography variant="h5"> About</Typography>
-            <Typography variant="h5"> Services</Typography>
-            <Typography variant="h5"> Contact</Typography>
-            <Typography variant="h5"> Persona</Typography>
-          </Grid>
-          <Grid className={classes.footerContent}>
-            <Typography variant="h4" style={{ fontWeight: "bold" }}>
-              {" "}
-              Location
-            </Typography>
-            <Typography variant="h5">
-              {" "}
-              169 Somewhere Street, Toronto, ON - CA
-            </Typography>
-            <Typography
-              style={{ marginTop: "5vh", fontWeight: "bold" }}
-              variant="h4"
-            >
-              {" "}
-              Email
-            </Typography>
-            <Typography variant="h5" >
-              {" "}
-              quantrithanh1999@gmail.com
+          <Grid item md={3} lg={3} xs={12} className={classes.footerHeader}>
+            <Grid className={classes.logo} item xs={12} sm={12} md={3}>
+              <Owl className="logo" style={{ fill: "#ffffff" }} />
+            </Grid>
+            <Typography variant="h4"> Glaukopis Wisdom</Typography>
+            <Typography align="center" variant="h6">
+              Perfect your professional portfolio
             </Typography>
           </Grid>
-          <Grid className={classes.footerContent}>
-            <Typography variant="h4" style={{ fontWeight: "bold" }}>
-              {" "}
-              Follow us
-            </Typography>
-            <Typography variant="h5">
-              {" "}
-              <Link> Twitter </Link>
-            </Typography>
-            <Typography variant="h5">
-              {" "}
-              <Link> LinkedIn </Link>
-            </Typography>
-            <Typography variant="h5">
-              {" "}
-              <Link> Github </Link>
-            </Typography>
-            <Typography variant="h5">
-              {" "}
-              <Link> Instagram </Link>
-            </Typography>
+          <Grid container className={classes.footerContent}>
+            <Grid item xs={3}>
+              <Typography variant="h4" style={{ fontWeight: "bold" }}>
+                Location
+              </Typography>
+              <Typography variant="h5">
+                169 Somewhere Street, Toronto, ON - CA
+              </Typography>
+            </Grid>
+            <Grid item xs={3}>
+              <Typography variant="h4" style={{ fontWeight: "bold" }}>
+                Follow us
+              </Typography>
+              <Typography variant="h5">
+                <Link color='secondary'> Twitter </Link>
+              </Typography>
+              <Typography variant="h5">
+                <Link color='secondary'> LinkedIn </Link>
+              </Typography>
+              <Typography variant="h5">
+                <Link color='secondary'> Instagram </Link>
+              </Typography>
+            </Grid>
+            <Grid item xs={3}>
+              <Typography
+                align="center"
+                variant="h4"
+                style={{ fontWeight: "bold" }}
+              >
+                Reach us
+              </Typography>
+              <Typography variant="h5">(647)-465-1767</Typography>
+              <Typography variant="h5">
+                <Link
+                  color="secondary"
+                  onClick={() => setParentDisplay(CONTACT)}
+                >
+                  or Contact us
+                </Link>
+              </Typography>
+            </Grid>
           </Grid>
         </Box>
       </Box>

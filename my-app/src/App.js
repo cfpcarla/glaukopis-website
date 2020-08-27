@@ -16,17 +16,17 @@ import {
   SERVICE,
 } from "./controller/nav-controller";
 import Footer from "./components/footer";
-
+import Persona from "./components/Persona"
 
 function App() {
   //SET WHICH TAB YOU WANT TO WORK IN
-  const [display, setDisplay] = useState(CONTACT);
+  const [display, setDisplay] = useState(ABOUT);
   return (
     <ThemeProvider theme={theme}>
       <Navigation setDisplay={setDisplay}></Navigation>
       <div >
         <Box display={display === HOME ? "block" : "none"}>
-          <Home/>
+          <Home setDisplay={setDisplay}/>
         </Box>
         <Box display={display === ABOUT ? "block" : "none"}>
           <About />
@@ -37,9 +37,11 @@ function App() {
         <Box display={display === SERVICE ? "block" : "none"}>
           <Service/>
         </Box>
-        <Box display={display === PERSONA ? "block" : "none"}></Box>
+        <Box display={display === PERSONA ? "block" : "none"}>
+          <Persona/>
+        </Box>
       </div>
-      <Footer/>
+      <Footer setDisplay={setDisplay} />
     </ThemeProvider>
   );
 }

@@ -80,6 +80,14 @@ const Contact = () => {
   const handleChangeMsg = (event) => {
     setFormData({ ...formData, msg: event.target.value });
   };
+  const sendFeedback = (templateId, variables) => {
+    window.emailjs
+      .send("gmail", templateId, variables)
+      .then((res) => {
+        console.log("Email successfully sent!");
+      })
+      .catch((err) => console.error("Development Error :", err));
+  };
   const handleSubmit = (e) => {
     confirmAlert({
       message: "Message sent - we will be in contact",
@@ -92,9 +100,12 @@ const Contact = () => {
       ],
     });
     setFormData({ submitted: true, name: "", email: "", msg: "" });
-
+    const templateId = "glaukopis_email";
+    sendFeedback(templateId, {
+      message_html: formData.msg,
+      from_email: formData.email,
+    });
     e.preventDefault();
-    console.log(formData);
   };
 
   return (
@@ -104,11 +115,11 @@ const Contact = () => {
       <ValidatorForm onSubmit={handleSubmit} className={classes.form}>
         <div className={classes.eduheader}>
           <Typography color="primary" variant="h3">
-            Contact our sales team
+            Contact our team now
           </Typography>
           <Typography color="primary" variant="h4">
-            Our team is happy to answer your sales questions. Fill out the form
-            and we’ll be in touch as soon as possible.
+            Our team is happy to answer your questions. Fill out the form and
+            we’ll be in touch as soon as possible.
           </Typography>
         </div>
 
