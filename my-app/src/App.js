@@ -37,8 +37,9 @@ function App() {
         <Box display={display === SERVICE ? "block" : "none"}>
           <Service />
         </Box>
-        <Box display={display === PERSONA ? "block" : "none"}></Box>
-        <Persona />
+        <Box display={display === PERSONA ? "block" : "none"}>
+          <Persona setDisplay={setDisplay} />
+        </Box>
       </div>
       <Footer />
     </ThemeProvider>
