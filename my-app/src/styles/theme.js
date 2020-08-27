@@ -66,7 +66,7 @@ theme.typography.h3 = {
 };
 
 theme.typography.h4 = {
-  fontSize: "1rem",
+  fontSize: "1.25rem",
   fontFamily: "Playfair Display",
   fontWeight: "normal",
   "@media (min-width:600px)": {

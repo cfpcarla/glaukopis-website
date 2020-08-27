@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: '2vh'
+    paddingTop: '2vh',
+    
     //margin: " 0 auto 2rem auto",
   },
   btnSecondary: {
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   desc: {
-    fontSize: 16,
+    fontSize: 18,
   },
 }));
 

@@ -75,7 +75,7 @@ const Footer = () => {
           <Grid className={classes.footerContent}>
             <Typography variant="h4" style={{ fontWeight: "bold" }}>
               {" "}
-              Headquarter
+              Location
             </Typography>
             <Typography variant="h5">
               {" "}

@@ -9,7 +9,13 @@ import JobSearch from "../assets/photo/job-opportunities.png";
 import Collecting from "../assets/photo/undraw_collecting_fjjl.png";
 import Review from "../assets/photo/review.png";
 import Compare from "../assets/photo/compare.png";
+import Lightbuld from "../assets/photo/lightbuld.png";
+import Bell from "../assets/photo/bell.png";
+import Folders from "../assets/photo/folders.png";
 import Filter from "../assets/photo/filter.png";
+import Networking from "../assets/photo/social-network.png";
+import Group from "../assets/photo/group.png";
+
 import { ReactComponent as Abstract } from "../assets/svg/undraw_abstract_x68e.svg";
 import { ReactComponent as Bookworm } from "../assets/svg/undraw_book_lover_mkck.svg";
 import { ReactComponent as OnlineReading } from "../assets/svg/undraw_online_reading_np7n.svg";
@@ -71,6 +77,8 @@ const serviceStyle = makeStyles((theme) => ({
 
     [theme.breakpoints.down("sm")]: {
       width: "100%",
+      justifyContent: "center",
+      alignItems: "center",
     },
   },
   Content: {
@@ -273,25 +281,41 @@ const Service = () => {
               <Grid container className={classes.contentFeatureList}>
                 <Carousel autoPlay={false}>
                   <CardFeature
-                    title="Filter Platform "
-                    desc="Change what platform you want us to search in - either it's Online courses, University lecture, or Youtube videos "
+                    title="Multi job board "
+                    desc="Our job library contain one of the most well sorted and collected job post resources around the internet - From Indeed to Company website job post, we got them all"
                     img={Collecting}
                     btn={false}
                     maxWidth={500}
                     margin="0 2vw 0 0"
                   />
                   <CardFeature
-                    title="Save point"
-                    desc="Still don't know which one to choose - save and compare theme both side by side "
-                    img={Forum}
+                    title="Save and Compare"
+                    desc="Still don't know which one to choose - save and compare theme side by side "
+                    img={Compare}
                     btn={false}
                     maxWidth={500}
                     margin="0 2vw 0 0"
                   />
                   <CardFeature
-                    title="General Review"
-                    desc="We gather review from the resources website so you can validate it base on how satisfy everyone was when learning"
-                    img={Workshop}
+                    title="Highlighted section"
+                    desc="We automaticlly went through the job post - scan for important details and highlight them in seperate section for you to get a summary out of what the recruiter want from an ideal candidate"
+                    img={Lightbuld}
+                    btn={false}
+                    maxWidth={500}
+                    margin="0 2vw 0 0"
+                  />
+                  <CardFeature
+                    title="Customize notification"
+                    desc="We provide notification about new job post base on your job search selected and allow you to what time you want us to notify you"
+                    img={Bell}
+                    btn={false}
+                    maxWidth={500}
+                    margin="0 2vw 0 0"
+                  />
+                  <CardFeature
+                    title="Customizable file upload"
+                    desc="Instead of writing and customize your resume, cover letter, and possible answer - We offer users who are sign in to have a folder storing multiple resume and cover letter along with predefined answer to reuse"
+                    img={Folders}
                     btn={false}
                     maxWidth={500}
                     margin="0 2vw 0 0"
@@ -340,30 +364,32 @@ const Service = () => {
             </Typography>
             <Grid item xs={12}>
               <Typography variant="h4" style={{ marginTop: "2rem" }}>
-                Search Enginee Features
+                Community Hub Features
               </Typography>
               <Grid container className={classes.contentFeatureList}>
                 <Carousel autoPlay={false}>
                   <CardFeature
-                    title="Filter Platform "
-                    desc="Change what platform you want us to search in - either it's Online courses, University lecture, or Youtube videos "
-                    img={Collecting}
+                    title=" Groups that represent you "
+                    desc="Create your own group, or find one that represent you - start inviting members to share your knowledge, or help other in the group "
+                    img={Group}
                     btn={false}
                     maxWidth={500}
                     margin="0 2vw 0 0"
                   />
                   <CardFeature
-                    title="Save point"
-                    desc="Still don't know which one to choose - save and compare theme both side by side "
-                    img={Forum}
+                    title="Customize your interest"
+                    desc="Select from a wide range of tags and category which interest you, and we will customize your community tab with what you want to see. "
+                    img={Filter}
                     btn={false}
                     maxWidth={500}
                     margin="0 2vw 0 0"
                   />
                   <CardFeature
-                    title="General Review"
-                    desc="We gather review from the resources website so you can validate it base on how satisfy everyone was when learning"
-                    img={Workshop}
+                    title="Event Hub"
+                    desc="We also have a dedicated section within the Community Hub call the Event Hub,
+                    where you can select your location of interest for us to match any networking 
+                    event or workshop near you to join remotely or on-site."
+                    img={Networking}
                     btn={false}
                     maxWidth={500}
                     margin="0 2vw 0 0"
@@ -395,29 +421,36 @@ const Service = () => {
             </Typography>
             <Grid item xs={12}>
               <Typography variant="h4" style={{ marginTop: "2rem" }}>
-                Search Enginee Features
+                Professional Workshop Features
               </Typography>
               <Grid container className={classes.contentFeatureList}>
                 <Carousel autoPlay={false}>
                   <CardFeature
-                    title="Filter Platform "
-                    desc="Change what platform you want us to search in - either it's Online courses, University lecture, or Youtube videos "
+                    title="Example Gallary"
+                    desc="Collection of resume, cover letter, along with 
+                    interview question and answer from around the internet for you to
+                    learn and experiment on."
                     img={Collecting}
                     btn={false}
                     maxWidth={500}
                     margin="0 2vw 0 0"
                   />
                   <CardFeature
-                    title="Save point"
-                    desc="Still don't know which one to choose - save and compare theme both side by side "
+                    title="Resume Assessment"
+                    desc="We provide link to resume assessment site which we believe are a good sources
+                    for you to build the perfect eye catching resume - 
+                    ensuring higher success rate when job searching"
                     img={Forum}
                     btn={false}
                     maxWidth={500}
                     margin="0 2vw 0 0"
                   />
                   <CardFeature
-                    title="General Review"
-                    desc="We gather review from the resources website so you can validate it base on how satisfy everyone was when learning"
+                    title="Interview skill"
+                    desc="Either it's a general question about yourself or
+                     a practical question, we got you cover - We collect a wide range
+                     of material
+                     related to interview question to your convenience."
                     img={Workshop}
                     btn={false}
                     maxWidth={500}

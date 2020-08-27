@@ -38,6 +38,21 @@
   width : 30vw;
   height : 50vh;
 }
+
+.react-confirm-alert-body{
+  border: solid #455954 2px;
+  width: max-content;
+  font-size : 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-btnConfirm {
+  font-size: 2rem;
+  padding: 2vh;
+}
+
 @media only screen and (max-width: 960px) {
   .img{
     margin: auto;
