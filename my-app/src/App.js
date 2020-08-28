@@ -18,7 +18,7 @@ import Footer from "./components/footer";
 
 function App() {
   //SET WHICH TAB YOU WANT TO WORK IN
-  const [display, setDisplay] = useState(SERVICE);
+  const [display, setDisplay] = useState(HOME);
   return (
     <ThemeProvider theme={theme}>
       <Navigation setDisplay={setDisplay}></Navigation>
