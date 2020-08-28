@@ -68,6 +68,7 @@ const CardFeature = (props) => {
             variant="contained"
             color="secondary"
             size="medium"
+            href={props.href}
           >
             Learn More
           </Button>

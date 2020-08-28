@@ -66,7 +66,7 @@ const serviceStyle = makeStyles((theme) => ({
   Container: {
     display: "flex",
     paddingBottom: "5vh",
-    justifyContent: "space-around",
+    justifyContent: "center",
     alignItems: "center",
     borderRadius: "10px 10px 0 0",
   },
@@ -82,7 +82,7 @@ const serviceStyle = makeStyles((theme) => ({
     },
   },
   Content: {
-    marginTop: "5vh",
+    margin: "5vh 2vw 0 2vw",
   },
   btnShow: {
     margin: "5vh 0 0 0",
@@ -138,12 +138,13 @@ const Service = () => {
             className={classes.btnSecondary}
             color="secondary"
             variant="contained"
+            href="#service-header"
           >
             See all features
           </Button>
         </Grid>
 
-        <Grid item xs={12} style={{ marginBottom: "2vh" }}>
+        <Grid id="service-header" item xs={12} style={{ marginBottom: "2vh" }}>
           <Typography variant="h4" align="center" style={{ marginTop: "2rem" }}>
             Glaukopis provided features
           </Typography>
@@ -155,6 +156,7 @@ const Service = () => {
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
+              href="#edu-section"
             />
             <CardFeature
               title="Job Opportunities"
@@ -163,6 +165,7 @@ const Service = () => {
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
+              href="#job-section"
             />
             <CardFeature
               title="Community Hub"
@@ -171,20 +174,23 @@ const Service = () => {
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
+              href="#com-section"
             />
             <CardFeature
-              title="Hiring Workshop"
+              title="Professional Workshop"
               desc="Job in mind? Strengthen your skills and ace your next job interview with ease!"
               img={JobSearch}
               btn={true}
               maxWidth={300}
               margin="0 auto 0 auto"
+              href="#pro-section"
             />
           </Grid>
         </Grid>
 
         {/* EDUCATION SECTION */}
         <Grid
+          id="edu-section"
           container
           className={classes.Container}
           style={{ backgroundColor: "#b47775" }}
@@ -198,14 +204,20 @@ const Service = () => {
           />
           <Grid item xs={10} md={4} lg={4} className={classes.Content}>
             <Typography style={{ marginBottom: "0.5rem" }} variant="h2">
-              Education Search Engine
+              Educational program
             </Typography>
 
             <Typography variant="h4">
-              Utilize our Glaukopis Wisdom archive to find tailored resources to
-              fit your personal needs – Whether it’s a new degree, a new
-              profession, or a new mentor, our courses and upskilling selections
-              are here for you.
+              Our online course selection has been vetted and verified to
+              provide you with the industry’s most renowned learning materials.
+              Our up to date programs are actively implemented and will help to
+              give you a leading edge in your field of interest. Utilize our
+              <br />
+              <br />
+              Glaukopis Wisdom archive to find tailored resources to fit your
+              personal needs – Whether it’s a new degree, a new profession, or a
+              new mentor, our courses and upskilling selections are here for
+              you.
             </Typography>
             <Grid item xs={12}>
               <Typography variant="h4" style={{ marginTop: "2rem" }}>
@@ -251,15 +263,21 @@ const Service = () => {
         </Grid>
 
         {/* JOB SEARCH SECTION */}
-        <Grid container className={classes.Container}>
+        <Grid id="job-section" container className={classes.Container}>
           <Grid item xs={10} md={4} lg={4} className={classes.Content}>
             <Typography style={{ marginBottom: "0.5rem" }} variant="h2">
               Job Search Engine
             </Typography>
 
             <Typography variant="h4">
-              Similar to traditional job searches, we offer a precise range of
-              options - more carefully related to your field.
+              Our in house bulletin boards are made to be the first stop on your
+              employment pursuits. We offer links to job search engines,
+              companies hiring around you, and business postings for both
+              contract and internship availabilities.
+              <br />
+              <br />
+              Similar to traditional job searches, we also offer a precise range
+              of options - more carefully related to your field.
             </Typography>
             <Grid item xs={12}>
               <Typography variant="h4" style={{ marginTop: "2rem" }}>
@@ -269,7 +287,7 @@ const Service = () => {
                 <Carousel autoPlay={false}>
                   <CardFeature
                     title="Highlighted section"
-                    desc="We automaticlly went through the job post - scan for important details and highlight them in each section for you to get a scope at what the recruiter want from an ideal candidate"
+                    desc="We automatically went through the job post - scan for important details and highlight them in each section for you to get a scope at what the recruiter want from an ideal candidate"
                     img={Lightbuld}
                     btn={false}
                     maxWidth={500}
@@ -300,7 +318,7 @@ const Service = () => {
               color="primary"
               variant="contained"
             >
-              Start your education search now
+              Start your job search now
             </Button>
           </Grid>
           <OnlineReading
@@ -314,6 +332,7 @@ const Service = () => {
 
         {/* Community hub section */}
         <Grid
+          id="com-section"
           container
           className={classes.Container}
           style={{ backgroundColor: "#b47775" }}
@@ -331,8 +350,8 @@ const Service = () => {
             </Typography>
 
             <Typography variant="h4">
-              A place to share knowledge - something something bla bla bla
-              tomorrow I will think of it.
+              Our community hub is a gateway for teachers, students, businesses,
+              and individuals - All working, learning, and improving as one.
             </Typography>
             <Grid item xs={12}>
               <Typography variant="h4" style={{ marginTop: "2rem" }}>
@@ -374,21 +393,21 @@ const Service = () => {
               color="primary"
               variant="contained"
             >
-              Start your education search now
+              Join our community now
             </Button>
           </Grid>
         </Grid>
 
         {/* Professional Workshop Section */}
-        <Grid container className={classes.Container}>
+        <Grid id="pro-section" container className={classes.Container}>
           <Grid item xs={10} md={4} lg={4} className={classes.Content}>
             <Typography style={{ marginBottom: "0.5rem" }} variant="h2">
               Professional Workshop
             </Typography>
 
             <Typography variant="h4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Job in mind? Strengthen your skills and ace your next job
+              interview with ease!
             </Typography>
             <Grid item xs={12}>
               <Typography variant="h4" style={{ marginTop: "2rem" }}>
@@ -435,7 +454,7 @@ const Service = () => {
               color="primary"
               variant="contained"
             >
-              Start your education search now
+              Get youself ready for the hiring process
             </Button>
           </Grid>
           <CareerProgression

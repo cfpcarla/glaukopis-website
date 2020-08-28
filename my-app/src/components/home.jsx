@@ -28,6 +28,7 @@ import Coursera from "../assets/photo/coursera-logo-black-transparent.png";
 import Indeed from "../assets/photo/indeed-logo.png";
 import Glassdoor from "../assets/photo/glassdoor-logo.png";
 import LinkedIn from "../assets/photo/linkedin.png";
+import FAQ from "./side-components/FAQ";
 
 const homeStyles = makeStyles((theme) => ({
   root: { flexGrow: 1 },
@@ -98,9 +99,10 @@ const homeStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
+    width: '60vw',
     [theme.breakpoints.down("md")]: {
       width: "100vw",
-      height:'auto'
+      height: 'auto'
     },
   },
   CommunityHub: {
@@ -121,7 +123,6 @@ const homeStyles = makeStyles((theme) => ({
     },
   },
   nextStep: {
-    // retro-furnish.png
     background:
       "linear-gradient(248.24deg, rgba(0, 0, 0, 0.473434) 0.31%, rgba(0, 0, 0, 0.441699) 20.56%, rgba(0, 0, 0, 0.437494) 77.15%, rgba(0, 0, 0, 0.447353) 99.8%, rgba(10, 10, 10, 0) 99.96%, rgba(126, 126, 126, 0) 99.97%, rgba(0, 0, 0, 0.5) 99.98%), url(" +
       Chalkboard +
@@ -129,32 +130,27 @@ const homeStyles = makeStyles((theme) => ({
 
     backgroundRepeat: "repeat",
     display: "flex",
-    flexDirection: "column",
+
     justifyContent: "center",
-    alignItems: "center",
     color: "white",
     padding: '3rem'
   },
-  nexStepContent: {
+  nextStepContent: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
-    width: "40vw",
-    [theme.breakpoints.down("sm")]: {
-      width: "90vw",
-    },
-    [theme.breakpoints.down("xs")]: {
-      width: "100vw",
-    },
+    marginBottom: '5vh'
+
+
   },
   buttonContainer: {
     marginTop: '5vh',
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'space-around'
 
   },
   btnCont: {
-    width: '8rem', height: '4rem', marginRight: '3vw',
+    width: "100vw", height: '4rem',
     [theme.breakpoints.down("sm")]: {
       width: "100vw",
     },
@@ -260,7 +256,7 @@ const Home = (props) => {
         {/* FLEX ON THE SEARCH ENGINEE */}
         <Grid item xs={12} md={12} className={classes.resourcesListContainer}>
           <Box height='80%' className={classes.resourcesPaper}>
-            <Typography gutterBottom variant="h3" align="center">
+            <Typography gutterBottom variant="h3" style={{ fontWeight: 'normal' }} align="center">
               We search around the internet to find the best resources for you to improve upon your next career path.
             </Typography>
             <Box className={classes.resourcesList}>
@@ -341,7 +337,7 @@ const Home = (props) => {
             </Typography>
             <Typography variant="h4" style={{ marginTop: "2rem" }}>
               We bring together everything that’s require to land your next
-              job. From edcational resources to improve your skills, to job
+              job. From educational  resources to improve your skills, to job
               search engine, or a professional workshop where you can
               improve upon your interview and resume skills.
             </Typography>
@@ -363,11 +359,12 @@ const Home = (props) => {
         </Box>
 
 
-        <Box xs={12} className={classes.nextStep}>
-          <Grid item xs={9} className={classes.nexStepContent}>
+        <Grid container className={classes.nextStep}>
+          <Grid item xs={12} md={4} className={classes.nextStepContent} style={{ margin: ' 0 auto 0 auto' }}>
             <Typography variant="h3"> Ready to get started ?</Typography>
             <Typography variant="h4" style={{ marginTop: "2rem" }}>
-              Still having trouble understanding our mission or services - Learn more about our services and about us bellow
+              Head over to Glaukopis Wisdom and start your career search now.
+              Still have question about our service and how it work ? - We answered a few frequently asked question for you.
             </Typography>
             <Grid item xs={12} className={classes.buttonContainer}>
               <Button className={classes.btnCont} variant="contained" color="secondary">
@@ -376,12 +373,12 @@ const Home = (props) => {
               <Button className={classes.btnCont} onClick={() => setParentDisplay(SERVICE)} variant="contained" color="primary" >
                 Explore services
               </Button>
-              <Button className={classes.btnCont} onClick={() => { setParentDisplay(ABOUT) }} variant="contained" color="default" >
-                Learn about us
-              </Button>
             </Grid>
           </Grid>
-        </Box>
+          <Grid item xs={12} md={6} className={classes.nextStepContent} style={{ margin: ' 0 auto 0 auto' }}>
+            <FAQ />
+          </Grid>
+        </Grid>
 
 
       </div>

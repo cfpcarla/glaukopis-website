@@ -1,20 +1,20 @@
 import React from "react";
 import ThanhQuan from "../assets/photo/ThanhQuan.JPG";
 import CarlaMedeiros from "../assets/photo/CarlaMedeiros.JPG";
+import Mission from "../assets/photo/mission.jpg";
+
 import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
+
 import DeveloperCard from "./side-components/developer-card";
 const AboutStyle = makeStyles((theme) => ({
   missionStatement: {
     marginTop: "2vh",
     marginBottom: "2vh",
     display: "flex",
-    flexDirection: "column",
+
     justifyContent: "center",
     alignItems: "center",
-    width: "50vw",
-    [theme.breakpoints.down("sm")]: {
-      width: "95vw",
-    },
+    height: "auto",
   },
 }));
 
@@ -27,23 +27,48 @@ const About = () => {
       alignItems="center"
       flexDirection="column"
     >
-      <Box className={classes.missionStatement}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Our mission
-        </Typography>
-        <Typography variant="h4" align="center">
-          Glaukopis Wisdom is a global community Software as a service,
-          welcoming people from every discipline and culture who aim is to seek
-          a better career path for themselves through education and knowledge.
-          We believe that with our dedicated library of search engines and
-          community hub, we can help our customers achieve just that and more.
-          On Glaukopis Wisdom, we are building a headquarter of free knowledge
-          gather around the world - along with building a dedicated community of
-          curious individual who love to engage with ideas and each other to
-          improve themselves and other, both online and offline at events that
-          we searches.
-        </Typography>
-      </Box>
+      <Grid container className={classes.missionStatement}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={4}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            style={{ width: "auto", height: "40vh" }}
+            src={Mission}
+            alt="mission statement"
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={6}
+          style={{ marginLeft: "2vw", marginRight: "2vw" }}
+        >
+          <Typography variant="h3" component="h1" gutterBottom>
+            Our mission
+          </Typography>
+          <Typography variant="h4">
+            Glaukopis Wisdom is a community Software as a service, welcoming
+            people from every discipline and culture who aim is to seek a better
+            career path for themselves through education and knowledge. We
+            believe that with our dedicated library of search engines and
+            community hub, we can help our customers achieve just that and more.
+            On Glaukopis Wisdom, we are building a headquarter of free knowledge
+            gather around the world - along with building a dedicated community
+            of curious individual who love to engage with ideas and each other
+            to improve themselves and other, both online and offline at events
+            that we searches.
+          </Typography>
+        </Grid>
+      </Grid>
 
       <Box
         display="flex"

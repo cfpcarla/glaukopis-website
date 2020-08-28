@@ -8,10 +8,9 @@ const footerStyle = makeStyles((theme) => ({
   root: {},
 
   footer: {
-    paddingTop: "1rem",
     display: "flex",
     flexWrap: "wrap",
-    marginTop: "2vh",
+    marginTop: "",
     marginLeft: "0",
     color: "white",
   },
@@ -34,7 +33,6 @@ const footerStyle = makeStyles((theme) => ({
     width: "100vw",
     flexWrap: "wrap",
     justifyContent: "space-around",
-    marginTop: "2vh",
     paddingTop: "2vh",
     paddingBottom: "4vh",
   },

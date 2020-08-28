@@ -4,7 +4,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
-import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 import GradeIcon from "@material-ui/icons/Grade";
 import {
@@ -22,17 +21,10 @@ import {
   ListItemIcon,
 } from "@material-ui/core";
 
-import {
-  HOME,
-  ABOUT,
-  CONTACT,
-  PERSONA,
-  SERVICE,
-} from "../controller/nav-controller";
+import { HOME, ABOUT, CONTACT, SERVICE } from "../controller/nav-controller";
 
 //navigation button
 const HeaderItem = ({ title, actionFn }) => {
-
   return (
     <Button aria-controls="simple-menu" aria-haspopup="true" onClick={actionFn}>
       <Typography variant="h5">{title}</Typography>
@@ -122,15 +114,6 @@ const Navigation = (props) => {
             actionFn={() => setParentDisplay(CONTACT)}
           />
         </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <PeopleAltIcon />
-          </ListItemIcon>
-          <HeaderItem
-            title="Persona"
-            actionFn={() => setParentDisplay(PERSONA)}
-          />
-        </ListItem>
       </List>
     </div>
   );
@@ -186,10 +169,6 @@ const Navigation = (props) => {
                   <HeaderItem
                     title="Contact Us"
                     actionFn={() => setParentDisplay(CONTACT)}
-                  />
-                  <HeaderItem
-                    title="Persona"
-                    actionFn={() => setParentDisplay(PERSONA)}
                   />
                 </Box>
               </Grid>
